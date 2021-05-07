@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>io.github.hiverunner</groupId>
+  <artifactId>mutant-swarm-test-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <!-- below isn't the actual inception year but is the year the copyright changed -->
+  <inceptionYear>2021</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <properties>
+    <buildnumber.maven.plugin.version>1.4</buildnumber.maven.plugin.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit.jupiter.version>5.7.0</junit.jupiter.version>
+    <junit4.version>4.13</junit4.version>
+    <junit.platform.launcher.version>1.4.2</junit.platform.launcher.version>
+    <license.maven.plugin.version>4.1</license.maven.plugin.version>
+  </properties>
+
+  <scm>
+    <connection>scm:git:https://github.com/HiveRunner/mutant-swarm-test.git</connection>
+    <developerConnection>scm:git:https://github.com/HiveRunner/mutant-swarm-test.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.mycila</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>${license.maven.plugin.version}</version>
+        <dependencies>
+          <dependency>
+            <groupId>com.mycila</groupId>
+            <artifactId>license-maven-plugin-git</artifactId>
+            <version>${license.maven.plugin.version}</version>
+          </dependency>
+        </dependencies>
+        <configuration>
+          <header>license/APACHE-2.txt</header>
+          <aggregate>true</aggregate>
+          <properties>
+            <owner>The HiveRunner Contributors</owner>
+          </properties>
+          <includes>
+            <include>**/src/main/java/**</include>
+            <include>**/src/test/java/**</include>
+          </includes>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>format</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.hotels</groupId>
+        <artifactId>mutant-swarm</artifactId>
+        <version>1.1.0-SNAPSHOT</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <modules>
+    <module>mutant-swarm-test-junit4</module>
+    <module>mutant-swarm-test-junit5</module>
+    <module>mutant-swarm-test-junit4-and-5</module>
+  </modules>
+
+</project>
