@@ -5,7 +5,7 @@
 
   <groupId>io.github.hiverunner</groupId>
   <artifactId>mutant-swarm-test-parent</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <!-- below isn't the actual inception year but is the year the copyright changed -->
   <inceptionYear>2021</inceptionYear>

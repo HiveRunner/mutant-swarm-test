@@ -8,3 +8,9 @@ It has 3 modules:
 
 ## How to test it
 Simply `git clone` the project and run `mvn package`. If the build is successful, check that the report in `/target/mutant-swarm-reports/` was generated successfully in each of the modules.
+
+# Legal
+This project is available under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
+
+Copyright 2021 The HiveRunner Contributors
+Copyright 2020 Expedia, Inc.
