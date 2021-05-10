@@ -68,13 +68,23 @@
       </plugin>
     </plugins>
   </build>
+  
+<!--   <dependencies>
+<dependency>
+    <groupId>com.klarna</groupId>
+    <artifactId>hiverunner</artifactId>
+    <version>6.0.1</version>
+    <scope>test</scope>
+</dependency>
+  
+  </dependencies> -->
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.hotels</groupId>
+        <groupId>io.github.hiverunner</groupId>
         <artifactId>mutant-swarm</artifactId>
-        <version>1.1.0-SNAPSHOT</version>
+        <version>1.2.0</version>
         <scope>test</scope>
       </dependency>
     </dependencies>

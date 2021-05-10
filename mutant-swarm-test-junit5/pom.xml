@@ -29,7 +29,7 @@
       <version>${junit.jupiter.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.hotels</groupId>
+      <groupId>io.github.hiverunner</groupId>
       <artifactId>mutant-swarm</artifactId>
       <exclusions>
         <exclusion>
