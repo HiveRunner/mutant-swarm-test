@@ -19,7 +19,6 @@ package com.expediagroup.dataplatform.mutantswarm.test.junit5;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.File;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
@@ -48,7 +47,7 @@ public class Junit5Test {
     List<String> expected = Arrays.asList("1\ttrue", "3\ttrue", "3\tfalse", "5\tfalse");
     assertEquals(expected, result);
   }
-  
+
   @MutantSwarmTest
   public void test2() {
     List<String> result = hiveShell.executeQuery("SELECT c FROM foobar");

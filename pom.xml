@@ -25,7 +25,7 @@
     <junit4.version>4.13</junit4.version>
     <junit.platform.launcher.version>1.4.2</junit.platform.launcher.version>
     <license.maven.plugin.version>4.1</license.maven.plugin.version>
-        <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
+    <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
   </properties>
 
   <scm>
@@ -67,32 +67,22 @@
           </execution>
         </executions>
       </plugin>
-      
-            <plugin>
+
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven.surefire.plugin.version}</version>
       </plugin>
     </plugins>
   </build>
-  
-<dependencies>
-<!-- <dependency>
-    <groupId>com.klarna</groupId>
-    <artifactId>hiverunner</artifactId>
-    <version>6.0.1</version>
-    <scope>test</scope>
-</dependency> -->
 
-
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.0.0-M5</version>
-</dependency>
-
-  
-  </dependencies> 
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.0.0-M5</version>
+    </dependency>
+  </dependencies>
 
   <dependencyManagement>
     <dependencies>
