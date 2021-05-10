@@ -40,18 +40,18 @@ public class Junit5Test {
 
   @HiveSQL(files = { "mutantSwarmTest/scriptToTest1.sql", "mutantSwarmTest/scriptToTest2.sql" })
   public HiveShell hiveShell;
+  
+  @MutantSwarmTest
+  public void tests() {
+    List<String> result = hiveShell.executeQuery("SELECT c FROM foobar");
+    List<String> expected = Arrays.asList("true", "false");
+    assertEquals(expected, result);
+  }
 
   @MutantSwarmTest
   public void test() {
     List<String> result = hiveShell.executeQuery("SELECT * FROM bar");
     List<String> expected = Arrays.asList("1\ttrue", "3\ttrue", "3\tfalse", "5\tfalse");
-    assertEquals(expected, result);
-  }
-
-  @MutantSwarmTest
-  public void test2() {
-    List<String> result = hiveShell.executeQuery("SELECT c FROM foobar");
-    List<String> expected = Arrays.asList("true", "false");
     assertEquals(expected, result);
   }
 
