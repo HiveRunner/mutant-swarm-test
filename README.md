@@ -1,5 +1,5 @@
 ## Overview
-This project tests that [Mutant Swarm](https://github.com/HotelsDotCom/mutant-swarm) works as a dependency with both JUnit4 and JUnit5.
+This project tests that [Mutant Swarm](https://github.com/HiveRunner/mutant-swarm) works as a dependency with both JUnit4 and JUnit5.
 
 It has 3 modules:
 - mutant-swarm-test-junit4: only has JUnit4 on the classpath.
