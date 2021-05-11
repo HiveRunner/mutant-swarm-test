@@ -8,3 +8,11 @@ It has 3 modules:
 
 ## How to test it
 Simply `git clone` the project and run `mvn package`. If the build is successful, check that the report in `/target/mutant-swarm-reports/` was generated successfully in each of the modules.
+
+Note: Mutant Swarm is supported and tested using Surefire version [3.0.0-M5](https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin/3.0.0-M5) and therefore we recommend that users use this one. If you use other versions (or don't specify any) there might be errors in the Maven testing stage.
+
+# Legal
+This project is available under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
+
+Copyright 2021 The HiveRunner Contributors
+Copyright 2020 Expedia, Inc.

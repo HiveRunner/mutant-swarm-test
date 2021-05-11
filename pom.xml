@@ -5,7 +5,7 @@
 
   <groupId>io.github.hiverunner</groupId>
   <artifactId>mutant-swarm-test-parent</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <!-- below isn't the actual inception year but is the year the copyright changed -->
   <inceptionYear>2021</inceptionYear>
@@ -25,6 +25,7 @@
     <junit4.version>4.13</junit4.version>
     <junit.platform.launcher.version>1.4.2</junit.platform.launcher.version>
     <license.maven.plugin.version>4.1</license.maven.plugin.version>
+    <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
   </properties>
 
   <scm>
@@ -47,7 +48,7 @@
           </dependency>
         </dependencies>
         <configuration>
-          <header>license/APACHE-2.txt</header>
+          <header>src/main/license/APACHE-2.txt</header>
           <aggregate>true</aggregate>
           <properties>
             <owner>The HiveRunner Contributors</owner>
@@ -66,15 +67,22 @@
           </execution>
         </executions>
       </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven.surefire.plugin.version}</version>
+      </plugin>
+      
     </plugins>
   </build>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.hotels</groupId>
+        <groupId>io.github.hiverunner</groupId>
         <artifactId>mutant-swarm</artifactId>
-        <version>1.1.0-SNAPSHOT</version>
+        <version>1.2.0</version>
         <scope>test</scope>
       </dependency>
     </dependencies>
