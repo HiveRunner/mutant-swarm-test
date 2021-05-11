@@ -1,3 +1,6 @@
+[![Build](https://github.com/HiveRunner/mutant-swarm-test/workflows/build/badge.svg)]
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 ## Overview
 This project tests that [Mutant Swarm](https://github.com/HotelsDotCom/mutant-swarm) works as a dependency with both JUnit4 and JUnit5.
 
